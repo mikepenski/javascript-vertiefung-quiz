@@ -1,0 +1,199 @@
+// Generic Styles
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#content{
+    font-family: 'Lemonada';
+    
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        @media(max-width: 768px){
+            height: auto;
+        }
+        &:nth-child(odd){
+            background-color: $grey-light;
+        }
+        .container{
+                max-width: 1250px;
+                margin: 0 auto;
+                width: 100%;
+            .quiz-item{
+                display: block;
+                width: 100%;
+                margin: 3rem 0;
+                .image{
+                    display: block;
+                    width: 100%;
+                    margin-bottom: .5rem;
+                    img{
+                        height: 375px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .question{
+                    width:100%;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin: 2rem 0;
+                    @media(max-width: 768px){
+                        font-size: 1.25rem;
+                        padding: 0 2rem;
+                    }
+                }
+                .choices{
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    button{
+                        padding: 1rem 2rem;
+                        font-size: 1.25rem;
+                        outline: none;
+                        &.choice{
+                            background: $primary;
+                            color: white;
+                            border-color: $primary;
+                            &.correct{
+                                background: $green;
+                                border-color: $green;
+                            }
+                            &.wrong{
+                                background: $red;
+                                border-color: $red;
+                            }
+                        }
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        @media(max-width: 768px){
+                            width: 95%;
+                            margin-bottom: .5rem ;
+                        }
+                    }
+                    button:disabled,
+                    button[disabled]{
+                        &:hover{
+                            cursor: not-allowed;
+                        }
+                    }
+                    @media(max-width: 768px){
+                        display: block;
+                    }
+                }
+            }
+            .next{
+                color: $primary;
+                text-decoration: none;
+                display: block;
+                margin-top: 7rem;
+                font-size: 1.25rem;
+                font-weight: bold;
+                position: relative;
+                padding-top: 70px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 24px;
+                    height: 24px;
+                    margin-left: -12px;
+                    border-left: 1px solid $primary;
+                    border-bottom: 1px solid $primary;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    -webkit-animation: sdb05 1.5s infinite;
+                    animation: sdb05 1.5s infinite;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    #your-result{
+        padding: 0 0 5rem 0;
+        font-size: 1.35rem;
+        text-align: center;
+        h1{
+            margin-bottom: 2rem;
+        }
+        .output{
+           svg{
+            width: 150px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            display: block;
+           }
+        }
+    }
+    .current-score{
+        position: fixed;
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        top: 30%;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        @media(max-width: 768px){
+            left: 0;
+            right: auto;
+            width: 100%;
+            top: auto;
+            bottom: 0;
+        }
+        br{
+            @media(max-width: 768px){
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+  @-webkit-keyframes sdb05 {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes sdb05 {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  

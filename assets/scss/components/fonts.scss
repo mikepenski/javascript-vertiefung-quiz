@@ -1,0 +1,26 @@
+/* lemonada-regular - latin */
+@font-face {
+  font-family: 'Lemonada';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lemonada-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lemonada-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lemonada-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lemonada-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lemonada-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lemonada-v12-latin-regular.svg#Lemonada') format('svg'); /* Legacy iOS */
+}
+/* lemonada-600 - latin */
+@font-face {
+  font-family: 'Lemonada';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/lemonada-v12-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lemonada-v12-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lemonada-v12-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lemonada-v12-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lemonada-v12-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lemonada-v12-latin-600.svg#Lemonada') format('svg'); /* Legacy iOS */
+}
